@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Door
+		</title>
+		<script>
+		function load() {
+			var key = sessionStorage.getItem("key");
+			console.log("Key is: " + key);
+			if (key == "taken")
+			{
+				document.getElementById("keyexists").style.display = "block";
+			}
+			else
+			{
+				document.getElementById("keyexists").style.display = "none";
+			}
+		
+		}
+		</script>
+	</head>
+<body onload="load()">
+<h1> Door </h1>
+<h2> Get into the house </h2>
+
+<div id="keyexists"> 
+	<a href="puzzle_inside.html">Unlock door</a>
+	<br><br>
+</div>
+
+<div id="garden"> 
+	<a href="puzzle_garden.html">Go to garden</a>
+	<br><br>
+</div>
+</body>
+</html>
+
+
+
+</body>
+</html>

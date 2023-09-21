@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Average
+		</title>
+		<script>
+		var grades = [100,90,,80,,70,];
+		var sum;
+
+		function showArray() {
+			document.getElementById("grades").innerHTML = grades;
+		}
+		
+		function showAverage() {
+			sum = 0;
+			if (grades.length > 0) {
+				for (i = 0; i < grades.length; i++) {
+					console.log("i  = " + i + ", sum before adding = " + sum);
+					if (grades[i]) {
+						sum = sum + grades[i];
+					}
+				}					
+				var average = sum / grades.length;
+				document.getElementById("average").innerHTML = average;
+			} else {
+				document.getElementById("average").innerHTML = "Array is empty!";
+			}
+		}
+		</script>
+	</head>
+<body onload="showArray()">
+<h1> Average Machine!!! </h1>
+<p>Array: <span id="grades"></span></p>
+<br/>
+<button onclick="showAverage()">Calculate!</button>
+<br/>
+<p><span id="average"></span></p>
+
+</body>
+</html>

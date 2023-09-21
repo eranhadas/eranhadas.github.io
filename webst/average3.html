@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Average
+		</title>
+		<script>
+		var grades = [];
+		var sum;
+
+		function showArray() {
+			document.getElementById("grades").innerHTML = grades;
+		}
+		
+		function showAverage() {
+			sum = 0;
+			for (i = 0; i < grades.length; i++) {
+				sum = sum + grades[i];
+			}
+				
+			var average = sum / grades.length;
+			document.getElementById("average").innerHTML = average;
+			
+		}
+		</script>
+	</head>
+<body onload="showArray()">
+<h1> Average Machine!!! </h1>
+<p>Array: <span id="grades"></span></p>
+<br/>
+<button onclick="showAverage()">Calculate!</button>
+<br/>
+<p><span id="average"></span></p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Like Machine
+		</title>
+		<script>
+		var numberOfLikes = 0;
+
+		function addLike() {
+			numberOfLikes += 1;
+			document.getElementById("total").innerHTML = numberOfLikes;
+			document.getElementById("onDate").innerHTML = "On " + Date();
+									
+			if (numberOfLikes == 7) {
+				document.getElementById("luckySeven").innerHTML = "Lucky seven!"
+			} else {
+				document.getElementById("luckySeven").innerHTML = "";
+			}
+						
+			if (numberOfLikes >= 10 && numberOfLikes < 100) {
+				document.getElementById("doubleFigures").innerHTML = "Double figures!";
+			} else {
+				document.getElementById("doubleFigures").innerHTML = "";
+			}
+		}
+		</script>
+	</head>
+<body>
+<h1> Like Machine!!! </h1>
+<button onclick="addLike()">Like!</button>
+<br/>
+<p>Total Likes: <span id="total">0</span></p>
+<p><span id="onDate"></span></p>
+<p><span id="luckySeven"></span></p>
+<p><span id="doubleFigures"></span></p>
+</body>
+</html>

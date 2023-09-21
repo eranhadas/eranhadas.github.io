@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Like Machine
+		</title>
+		<script>
+		var numberOfLikes = 0;
+
+		function addLike() {
+			numberOfLikes = numberOfLikes + 1;
+			document.getElementById("total").innerHTML = numberOfLikes;
+		}
+		</script>
+	</head>
+<body>
+<h1> Like Machine!!! </h1>
+<button onclick="addLike()">Like!</button>
+<br/>
+<p>Total Likes: <span id="total">0</span></p>
+</body>
+</html>

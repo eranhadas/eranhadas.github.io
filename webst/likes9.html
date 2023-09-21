@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Like Machine
+		</title>
+		<script>
+		var numberOfLikes = 0;
+		var spans;
+		var backgroundColors = ["lightblue", "lightpink", "lime", "lightblue"];
+		
+		function onLoad() {
+			spans = document.getElementsByTagName("SPAN");
+			console.log("Number of spans: " + spans.length);			
+		}
+		
+		function addLike() {
+			numberOfLikes += 1;
+			document.getElementById("total").innerHTML = numberOfLikes;
+			document.getElementById("onDate").innerHTML = "On " + Date();
+						
+			if (numberOfLikes == 7) {
+				document.getElementById("luckySeven").innerHTML = "Lucky seven!";
+				for (i = 0; i < spans.length; i++) { 
+					spans[i].style.backgroundColor = backgroundColors[i];
+				}				
+			} else {
+				document.getElementById("luckySeven").innerHTML = "";
+				for (i = 0; i < spans.length; i++) { 
+					spans[i].style.backgroundColor = "";
+				}	
+			}
+									
+			if (numberOfLikes >= 10 && numberOfLikes < 100) {
+				document.getElementById("doubleFigures").innerHTML = "Double figures!";
+			} else {
+				document.getElementById("doubleFigures").innerHTML = "";
+			}
+		}
+		</script>
+	</head>
+<body onload="onLoad()">
+<h1> Like Machine!!! </h1>
+<button onclick="addLike()">Like!</button>
+<br/>
+<p>Total Likes: <span id="total">0</span></p>
+<p><span id="onDate"></span></p>
+<p><span id="luckySeven"></span></p>
+<p><span id="doubleFigures"></span></p>
+</body>
+</html>

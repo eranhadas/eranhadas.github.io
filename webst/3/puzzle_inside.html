@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Inside
+		</title>
+		<script>
+		function deleteInventory() {
+			sessionStorage.removeItem("key");
+		}
+		
+		function load() {
+			deleteInventory();
+			countEndings();
+		}
+		
+		function countEndings() {
+			var endings = localStorage.getItem("endings");
+			console.log("endings " + endings);
+			if (endings) {
+				var endingsAsNumber = Number(endings);				
+				localStorage.setItem("endings", endingsAsNumber + 1);
+			} else {
+				localStorage.setItem("endings", 1);
+			}		
+			document.getElementById("ended").innerHTML = 
+				"This game was ended " + localStorage.getItem("endings") + 
+				" times on this browser";
+		}
+		</script>
+	</head>
+<body onload="load()">
+<h1> Inside </h1>
+<h2> Yes!!!! Home Sweet Home! You won! </h2>
+<br>
+<div id="ended"> </div>
+<br> <a href="puzzle_door.html">Start Over</a>
+
+</body>
+</html>
+
+
+

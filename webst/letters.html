@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+
+
+var meotArr = ["","ק","ר","ש","ת"];
+var asarotArr = ["","י","כ","ל","מ","נ","ס","ע","פ","צ"];
+var ahadotArr = ["","א","ב","ג","ד","ה","ו","ז","ח","ט"];
+function calc(num) {
+var str = "";
+if (num > 484) {
+ return ("גדול מדי"); 
+}
+if (num < 0) {
+return ("קטן מדי"); 
+}
+
+if (num >= 100) {
+	var meot = Math.floor(num / 100);	
+	str += meotArr[meot];	
+	num = num % 100;
+}
+
+if (num >= 10) {
+	if (num == 15) 
+		return str + "טו";
+	if (num == 16) 
+		return str + "טז";
+	var asarot = Math.floor(num / 10);
+	str += asarotArr[asarot];
+	num = num % 10;
+}
+
+if (num >= 1) {
+	str += ahadotArr[num];
+}
+
+return str;
+
+}
+
+function printall() {
+	var str = "";
+	for (var i=1; i <= 484; i++) {
+		str+= calc(i) + "<br>";
+	}
+	document.getElementById("all").innerHTML = str;
+}
+function doIt() {
+var res = calc(document.getElementById("inp").value);
+document.getElementById("res").innerHTML = res;
+}
+</script>
+</head>
+<body onload="printall()" dir="rtl">
+<div id="all" />
+תן מספר: <input id="inp" type="text">
+<button onclick="doIt()">חשב</button>
+<br/>
+<div id="res"/>
+
+
+
+</body>
+</html>
+

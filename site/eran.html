@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--link rel="preload" href="fonts/MiriamLibre-Regular.woff2" as="font" type="font/woff2" crossorigin-->
+    <title>טבוּר - יצירה מאת נטע לב טוב</title>
+    <link rel="stylesheet" href="netta.css?ver=1011a">
+</head>
+<body>
+	<h1 style="font-size: 250%">טבוּר</h1>
+	<br>
+	<h1>*</h1>
+    <div class="poem">      
+		<p>מה.י</p>	
+        <p id="line2">היא</p>
+        <p>אמ.בא</p>
+        <p>אב.מא</p>
+        <p>?</p>
+    </div>
+	<br><br><br><br><br><br><br><br>
+	<h1> אנּ </h1>
+	<div class="poem">
+        <p>אמהוֹּת</p>        
+		<p>אחיוֹּת</p>        
+        <p id="line3">
+            <span id="alef" class="static">אל</span>
+            <span id="yodLamed" class="hidden scale">(יל)</span>
+            <span id="period" class="hidden">.</span>
+            <span id="vavTav" class="">וּת</span>
+            <span id="heVav" class="hidden scale-from-left">(וה)</span> <!-- Step 5 element -->
+        </p>
+        <p id="newLine" class="hidden">		
+		<span class="attached" id="anuVav">אנוּ</span>
+		</p> <!-- Step 8: New line with "אנו" -->
+    </div>
+
+    <!-- Container for the Shuruk/Dagesh line -->
+    <div id="lineAnimation" class="hidden"></div>
+	<br><br><br><br><br><br><br><br>
+	<h1> בסופי </h1>
+	<div class="poem poem3">
+    <!-- The four lines with ל ל לל ל characters, initially hidden -->		
+		<p>&nbsp;</p><p>&nbsp;</p>
+		<p id="targetLine">אֶהֱפֹךְ <span id="targetText">לְחָלָלאֱלֹ</span>הִי</p> 
+		<p>שֶׁל מִי שֶׁאָהֲב.וּ.ה אוֹתִי</p> 
+		<p>טַל עָלִים 
+		<span id="targetText2">חֶלְקִיקַי</span> </p>        
+		<p>מֵי בִּיּוּב אֲבַק </p>
+		<p>כּוֹכָבִים</p>        
+		<p>אֵשׁ כֻּלִּי</p> 
+		<p>אֶחֱלֹשׁ עַצְמִי בַּכֹּל</p>        
+		<p>אֶלְחַשׁ</p> 
+		<p>אחל.לחש</p>        
+		<p>אלח.חלש</p> 
+		<p id="shins"></p>				
+	</div>
+	<div>
+		<div style="position: absolute" class="movings moving-1 hidden">ל לל ל ל</div>
+		<div style="position: absolute" class="movings moving-2 hidden">ל לל ל ל</div>
+		<div style="position: absolute" class="movings moving-3 hidden">ל לל ל ל</div>
+		<div style="position: absolute" class="movings moving-4 hidden">ל לל ל ל</div>
+	</div>
+	<div>
+		<div style="position: absolute" class="movings2 moving2 hidden">ק ק</div>
+		<div style="position: absolute" class="movings2 moving2 hidden">ק ק</div>
+		<div style="position: absolute" class="movings2 moving2 hidden">ק ק</div>
+		<div style="position: absolute" class="movings2 moving2 hidden">ק ק</div> 
+		
+		 
+	</div>
+	<br><br><br><br>
+	<h3>טבוּר - יצירה מאת נטע לב טוב</h3>	
+	<h4>עיצוב: מאור פרידמן</h4>	
+	<h4>תכנות: ערן הדס</h4>	
+	<br>
+	<h4>טבוּר היא שירה אנימטיבית, בטכניקה אשר חוקרת את האפשרויות בפריצת הגבולות הסטטים של השפה.</h4>	
+	<h4>יצירה מבית 
+	<a href="https://barhash.com" target="_blank">ברחש הוצאה לאור</a></h4>	
+	<script src="netta.js?ver=1011a"></script>
+</body>
+</html>
